@@ -164,8 +164,7 @@ gt_countries <- unique_coffees %>%
                            column_labels.border.bottom.color = brownie[10],
                            heading.border.bottom.color = brownie[10])
 
-gt_grob(gt_countries)
-
+gt:::as.tags.gt_tbl(gt_countries) # https://github.com/rstudio/gt/issues/823
 ```
 
 ```{r, gt corrs}
@@ -196,8 +195,7 @@ gt_corrs <-
               column_labels.border.bottom.color = brownie[10],
               heading.border.bottom.color = brownie[10])
 
-gt_grob(gt_corrs)
-
+gt:::as.tags.gt_tbl(gt_corrs)
 ```
 
 # gg section 
@@ -232,7 +230,9 @@ coffee_filtered %>%
   theme(
     legend.title = element_blank(),
     legend.position = "bottom"
-  ) + brown_theme
+  ) + 
+  brown_theme #+ 
+    #theme(aspect.ratio = 1)
 
 gg_jitter <- 
 coffee_filtered %>%
@@ -254,7 +254,9 @@ coffee_filtered %>%
   theme(
     legend.title = element_blank(),
     legend.position = "none"
-  ) + brown_theme
+  ) + 
+  brown_theme #+ 
+    #theme(aspect.ratio = 1)
 
 
 # create ggplot of gt info, gt does not jive well with patchwork
@@ -279,7 +281,9 @@ unique_coffees %>%
   theme(
     legend.title = element_blank(),
     legend.position = "none"
-  ) + brown_theme
+  ) + 
+  brown_theme #+ 
+    #theme(aspect.ratio = 1)
 
 gg_corrs <- 
   coffee_filtered %>% 
@@ -297,29 +301,67 @@ gg_corrs <-
     ) + 
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
-    brown_theme 
+    brown_theme #+
+  #theme(aspect.ratio = 1)
 
 
 ```
 
+## EDA
+
+of the top rated origins, below shows the distributions of cup ratings for each origin using jitter plots. 
+```{r}
+gg_jitter
+```
+
+
+exploring the slight relationship seen when viewing cup rating as a function of farm elevation.
+```{r}
+gg_elev
+```
+
+correlations between total cup rating & various contributing factors/ratings 
+```{r}
+gg_corrs
+```
+
+country ratings among the most diverse origins
+```{r}
+gg_countries
+```
+
+
 # patchwork 
 
-```{r, patchy}
+```{r, patchwork}
+
 # patchwork -----------------------------------------------------------------------------
-layout <- "
-AC
-BD
-"
-gg_jitter + gg_elev + gg_corrs + gg_countries +
-  plot_layout(design = layout) + 
-  plot_annotation(
-    title = 'Coffee Rating & Origin Exploration',
-    subtitle = 'A Story of Total Cup Ratings & Other Features',
-    caption = 'TidyTuesday Coffee Rating Dataset  
-               Using some new friends: patchwork, monochromeR, emo & PrettyCols +   
-               some old faithfuls: dplyr, tidyr, corrr, & ggplot2',
-    theme = brown_theme + theme(plot.title = element_text(size = 26))
-  ) 
+# layout <- "
+# AC
+# BD
+# "
+# gg_jitter + gg_elev + gg_corrs + gg_countries +
+#   plot_layout(design = layout) + 
+#   plot_annotation(
+#     title = 'Coffee Rating & Origin Exploration',
+#     subtitle = 'A Story of Total Cup Ratings & Other Features',
+#     caption = 'TidyTuesday Coffee Rating Dataset  
+#                Using some new friends: patchwork, monochromeR, emo & PrettyCols +   
+#                some old faithfuls: dplyr, tidyr, corrr, & ggplot2',
+#     theme = brown_theme + theme(plot.title = element_text(size = 26))
+#   ) 
+
+# wrap_plots(gg_jitter, gg_corrs, gg_elev, gg_countries, 
+#            ncol = 2) + 
+#   plot_annotation(
+#     title = 'Coffee Rating & Origin Exploration',
+#     subtitle = 'A Story of Total Cup Ratings & Other Features',
+#     caption = 'TidyTuesday Coffee Rating Dataset
+#                Using some new friends: patchwork, monochromeR, emo & PrettyCols +
+#                some old faithfuls: dplyr, tidyr, corrr, & ggplot2',
+#     theme = brown_theme + theme(plot.title = element_text(size = 26))
+#   )
+
 
 ```
 
