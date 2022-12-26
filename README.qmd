@@ -164,7 +164,7 @@ gt_countries <- unique_coffees %>%
                            column_labels.border.bottom.color = brownie[10],
                            heading.border.bottom.color = brownie[10])
 
-gt_countries
+gt_grob(gt_countries)
 
 ```
 
@@ -196,7 +196,7 @@ gt_corrs <-
               column_labels.border.bottom.color = brownie[10],
               heading.border.bottom.color = brownie[10])
 
-gt_corrs
+gt_grob(gt_corrs)
 
 ```
 
