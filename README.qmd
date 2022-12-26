@@ -11,6 +11,8 @@ Exploring an older TidyTuesday dataset with new tools.
 
 setup chunk:
 ```{r, setup}
+#| warning: false
+
 library(dplyr)
 library(tidyr)
 library(corrr) 
@@ -164,7 +166,7 @@ gt_countries <- unique_coffees %>%
                            column_labels.border.bottom.color = brownie[10],
                            heading.border.bottom.color = brownie[10])
 
-gt:::as.tags.gt_tbl(gt_countries) # https://github.com/rstudio/gt/issues/823
+as_raw_html(gt_countries) # https://github.com/rstudio/gt/issues/104
 ```
 
 ```{r, gt corrs}
@@ -195,7 +197,7 @@ gt_corrs <-
               column_labels.border.bottom.color = brownie[10],
               heading.border.bottom.color = brownie[10])
 
-gt:::as.tags.gt_tbl(gt_corrs)
+as_raw_html(gt_corrs)
 ```
 
 # gg section 

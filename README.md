@@ -10,64 +10,15 @@ setup chunk:
 
 ``` r
 library(dplyr)
-```
-
-    Warning: package 'dplyr' was built under R version 4.2.1
-
-
-    Attaching package: 'dplyr'
-
-    The following objects are masked from 'package:stats':
-
-        filter, lag
-
-    The following objects are masked from 'package:base':
-
-        intersect, setdiff, setequal, union
-
-``` r
 library(tidyr)
-```
-
-    Warning: package 'tidyr' was built under R version 4.2.1
-
-``` r
 library(corrr) 
-```
 
-    Warning: package 'corrr' was built under R version 4.2.2
-
-``` r
 library(ggplot2)
-```
-
-    Warning: package 'ggplot2' was built under R version 4.2.1
-
-``` r
 library(gt)            
-```
-
-    Warning: package 'gt' was built under R version 4.2.2
-
-``` r
 library(patchwork)
-```
 
-    Warning: package 'patchwork' was built under R version 4.2.2
-
-``` r
 library(monochromeR)
-```
-
-    Warning: package 'monochromeR' was built under R version 4.2.2
-
-``` r
 library(PrettyCols)
-```
-
-    Warning: package 'PrettyCols' was built under R version 4.2.2
-
-``` r
 library(emo)
 # emo::ji_find("hot_beverage")
 emo::ji("hot_beverage") -> cup 
@@ -225,465 +176,56 @@ gt_countries <- unique_coffees %>%
                            column_labels.border.bottom.color = brownie[10],
                            heading.border.bottom.color = brownie[10])
 
-gt:::as.tags.gt_tbl(gt_countries) # https://github.com/rstudio/gt/issues/823
+as_raw_html(gt_countries) # https://github.com/rstudio/gt/issues/104
 ```
 
-<div id="dhusvacumu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#dhusvacumu .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #D09090;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#dhusvacumu .gt_heading {
-  background-color: #D09090;
-  text-align: center;
-  border-bottom-color: #D09090;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#dhusvacumu .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#dhusvacumu .gt_title {
-  color: #FFFFFF;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #D09090;
-  border-bottom-width: 0;
-}
-
-#dhusvacumu .gt_subtitle {
-  color: #FFFFFF;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #D09090;
-  border-top-width: 0;
-}
-
-#dhusvacumu .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #AC3B3B;
-}
-
-#dhusvacumu .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #AC3B3B;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#dhusvacumu .gt_col_heading {
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#dhusvacumu .gt_column_spanner_outer {
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#dhusvacumu .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#dhusvacumu .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#dhusvacumu .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #AC3B3B;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#dhusvacumu .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#dhusvacumu .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#dhusvacumu .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#dhusvacumu .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#dhusvacumu .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #DEB2B2;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#dhusvacumu .gt_stub {
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dhusvacumu .gt_stub_row_group {
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#dhusvacumu .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#dhusvacumu .gt_summary_row {
-  color: #FFFFFF;
-  background-color: #D09090;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dhusvacumu .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#dhusvacumu .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#dhusvacumu .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#dhusvacumu .gt_grand_summary_row {
-  color: #FFFFFF;
-  background-color: #D09090;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dhusvacumu .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#dhusvacumu .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#dhusvacumu .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#dhusvacumu .gt_footnotes {
-  color: #FFFFFF;
-  background-color: #D09090;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#dhusvacumu .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dhusvacumu .gt_sourcenotes {
-  color: #FFFFFF;
-  background-color: #D09090;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#dhusvacumu .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#dhusvacumu .gt_left {
-  text-align: left;
-}
-
-#dhusvacumu .gt_center {
-  text-align: center;
-}
-
-#dhusvacumu .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#dhusvacumu .gt_font_normal {
-  font-weight: normal;
-}
-
-#dhusvacumu .gt_font_bold {
-  font-weight: bold;
-}
-
-#dhusvacumu .gt_font_italic {
-  font-style: italic;
-}
-
-#dhusvacumu .gt_super {
-  font-size: 65%;
-}
-
-#dhusvacumu .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 75%;
-  vertical-align: 0.4em;
-}
-
-#dhusvacumu .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#dhusvacumu .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#dhusvacumu .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#dhusvacumu .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#dhusvacumu .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#dhusvacumu .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table">
+<div id="yxnygavqhj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+  
+  <table class="gt_table" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #FFFFFF; font-size: 16px; font-weight: normal; font-style: normal; background-color: #D09090; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#D09090">
   <thead class="gt_header">
     <tr>
-      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Origin Samples &amp; Mean Total ☕ Points </td>
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="background-color: #D09090; text-align: center; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; color: #FFFFFF; font-size: 125%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #AC3B3B; font-weight: normal;" bgcolor="#D09090" align="center">Origin Samples &amp; Mean Total ☕ Points </td>
     </tr>
     
   </thead>
-  <thead class="gt_col_headings">
+  <thead class="gt_col_headings" style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #AC3B3B; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Origin">Origin</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Distinct Samples">Distinct Samples</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Avg Rating">Avg Rating</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Origin" style="color: #FFFFFF; background-color: #D09090; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#D09090" valign="bottom" align="left">Origin</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Distinct Samples" style="color: #FFFFFF; background-color: #D09090; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" bgcolor="#D09090" valign="bottom" align="right">Distinct Samples</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Avg Rating" style="color: #FFFFFF; background-color: #D09090; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" bgcolor="#D09090" valign="bottom" align="right">Avg Rating</th>
     </tr>
   </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="country_of_origin" class="gt_row gt_left">Ethiopia</td>
-<td headers="n" class="gt_row gt_right">44</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #2E0B0B; color: #FFFFFF;">85.48</td></tr>
-    <tr><td headers="country_of_origin" class="gt_row gt_left">Kenya</td>
-<td headers="n" class="gt_row gt_right">25</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #822121; color: #FFFFFF;">84.31</td></tr>
-    <tr><td headers="country_of_origin" class="gt_row gt_left">Uganda</td>
-<td headers="n" class="gt_row gt_right">36</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #B44D4D; color: #FFFFFF;">83.45</td></tr>
-    <tr><td headers="country_of_origin" class="gt_row gt_left">Colombia</td>
-<td headers="n" class="gt_row gt_right">183</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #C16E6D; color: #FFFFFF;">83.11</td></tr>
-    <tr><td headers="country_of_origin" class="gt_row gt_left">El Salvador</td>
-<td headers="n" class="gt_row gt_right">21</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #C37272; color: #FFFFFF;">83.05</td></tr>
-    <tr><td headers="country_of_origin" class="gt_row gt_left">Costa Rica</td>
-<td headers="n" class="gt_row gt_right">51</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #CE8B8B; color: #FFFFFF;">82.79</td></tr>
-    <tr><td headers="country_of_origin" class="gt_row gt_left">Thailand</td>
-<td headers="n" class="gt_row gt_right">32</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #D69F9F; color: #000000;">82.57</td></tr>
-    <tr><td headers="country_of_origin" class="gt_row gt_left">Brazil</td>
-<td headers="n" class="gt_row gt_right">132</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #DDAEAE; color: #000000;">82.41</td></tr>
-    <tr><td headers="country_of_origin" class="gt_row gt_left">Tanzania, United Republic Of</td>
-<td headers="n" class="gt_row gt_right">40</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #DEB2B2; color: #000000;">82.37</td></tr>
-    <tr><td headers="country_of_origin" class="gt_row gt_left">Taiwan</td>
-<td headers="n" class="gt_row gt_right">75</td>
-<td headers="mean_total_cup_pts" class="gt_row gt_right" style="background-color: #EDD4D4; color: #000000;">82.00</td></tr>
+  <tbody class="gt_table_body" style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3;">
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Ethiopia</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">44</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #2E0B0B; color: #FFFFFF;" bgcolor="#2E0B0B" valign="middle" align="right">85.48</td></tr>
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Kenya</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">25</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #822121; color: #FFFFFF;" bgcolor="#822121" valign="middle" align="right">84.31</td></tr>
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Uganda</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">36</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #B44D4D; color: #FFFFFF;" bgcolor="#B44D4D" valign="middle" align="right">83.45</td></tr>
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Colombia</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">183</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #C16E6D; color: #FFFFFF;" bgcolor="#C16E6D" valign="middle" align="right">83.11</td></tr>
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">El Salvador</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">21</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #C37272; color: #FFFFFF;" bgcolor="#C37272" valign="middle" align="right">83.05</td></tr>
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Costa Rica</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">51</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #CE8B8B; color: #FFFFFF;" bgcolor="#CE8B8B" valign="middle" align="right">82.79</td></tr>
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Thailand</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">32</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #D69F9F; color: #000000;" bgcolor="#D69F9F" valign="middle" align="right">82.57</td></tr>
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Brazil</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">132</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #DDAEAE; color: #000000;" bgcolor="#DDAEAE" valign="middle" align="right">82.41</td></tr>
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Tanzania, United Republic Of</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">40</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #DEB2B2; color: #000000;" bgcolor="#DEB2B2" valign="middle" align="right">82.37</td></tr>
+    <tr><td headers="country_of_origin" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Taiwan</td>
+<td headers="n" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">75</td>
+<td headers="mean_total_cup_pts" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #EDD4D4; color: #000000;" bgcolor="#EDD4D4" valign="middle" align="right">82.00</td></tr>
   </tbody>
   
   
@@ -724,454 +266,45 @@ gt_corrs <-
     • Missing treated using: 'pairwise.complete.obs'
 
 ``` r
-gt:::as.tags.gt_tbl(gt_corrs)
+as_raw_html(gt_corrs)
 ```
 
-<div id="lyyauxslbm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#lyyauxslbm .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #D09090;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#lyyauxslbm .gt_heading {
-  background-color: #D09090;
-  text-align: center;
-  border-bottom-color: #D09090;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#lyyauxslbm .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#lyyauxslbm .gt_title {
-  color: #FFFFFF;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #D09090;
-  border-bottom-width: 0;
-}
-
-#lyyauxslbm .gt_subtitle {
-  color: #FFFFFF;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #D09090;
-  border-top-width: 0;
-}
-
-#lyyauxslbm .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #AC3B3B;
-}
-
-#lyyauxslbm .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #AC3B3B;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#lyyauxslbm .gt_col_heading {
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#lyyauxslbm .gt_column_spanner_outer {
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#lyyauxslbm .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#lyyauxslbm .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#lyyauxslbm .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #AC3B3B;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#lyyauxslbm .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#lyyauxslbm .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#lyyauxslbm .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#lyyauxslbm .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#lyyauxslbm .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #DEB2B2;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#lyyauxslbm .gt_stub {
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#lyyauxslbm .gt_stub_row_group {
-  color: #FFFFFF;
-  background-color: #D09090;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#lyyauxslbm .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#lyyauxslbm .gt_summary_row {
-  color: #FFFFFF;
-  background-color: #D09090;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#lyyauxslbm .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#lyyauxslbm .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#lyyauxslbm .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#lyyauxslbm .gt_grand_summary_row {
-  color: #FFFFFF;
-  background-color: #D09090;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#lyyauxslbm .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#lyyauxslbm .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#lyyauxslbm .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#lyyauxslbm .gt_footnotes {
-  color: #FFFFFF;
-  background-color: #D09090;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#lyyauxslbm .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#lyyauxslbm .gt_sourcenotes {
-  color: #FFFFFF;
-  background-color: #D09090;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#lyyauxslbm .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#lyyauxslbm .gt_left {
-  text-align: left;
-}
-
-#lyyauxslbm .gt_center {
-  text-align: center;
-}
-
-#lyyauxslbm .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#lyyauxslbm .gt_font_normal {
-  font-weight: normal;
-}
-
-#lyyauxslbm .gt_font_bold {
-  font-weight: bold;
-}
-
-#lyyauxslbm .gt_font_italic {
-  font-style: italic;
-}
-
-#lyyauxslbm .gt_super {
-  font-size: 65%;
-}
-
-#lyyauxslbm .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 75%;
-  vertical-align: 0.4em;
-}
-
-#lyyauxslbm .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#lyyauxslbm .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#lyyauxslbm .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#lyyauxslbm .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#lyyauxslbm .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#lyyauxslbm .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table">
+<div id="nzjcbsvqqk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+  
+  <table class="gt_table" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #FFFFFF; font-size: 16px; font-weight: normal; font-style: normal; background-color: #D09090; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#D09090">
   <thead class="gt_header">
     <tr>
-      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>☕ Points &amp; Rating Correlations</td>
+      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="background-color: #D09090; text-align: center; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; color: #FFFFFF; font-size: 125%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #AC3B3B; font-weight: normal;" bgcolor="#D09090" align="center">☕ Points &amp; Rating Correlations</td>
     </tr>
     
   </thead>
-  <thead class="gt_col_headings">
+  <thead class="gt_col_headings" style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #AC3B3B; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Other Ratings">Other Ratings</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Total Cup Correlation">Total Cup Correlation</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Other Ratings" style="color: #FFFFFF; background-color: #D09090; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#D09090" valign="bottom" align="left">Other Ratings</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Total Cup Correlation" style="color: #FFFFFF; background-color: #D09090; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" bgcolor="#D09090" valign="bottom" align="right">Total Cup Correlation</th>
     </tr>
   </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="term" class="gt_row gt_left">flavor</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #2E0B0B; color: #FFFFFF;">0.83</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">aftertaste</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #3C0F0F; color: #FFFFFF;">0.79</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">acidity</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #561515; color: #FFFFFF;">0.72</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">balance</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #5A1616; color: #FFFFFF;">0.71</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">cupper_points</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #651919; color: #FFFFFF;">0.68</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">aroma</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #671A1A; color: #FFFFFF;">0.68</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">body</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #791E1E; color: #FFFFFF;">0.63</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">clean_cup</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #B24A4A; color: #FFFFFF;">0.44</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">uniformity</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #BA5E5E; color: #FFFFFF;">0.40</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">sweetness</td>
-<td headers="total_cup_points" class="gt_row gt_right" style="background-color: #EDD4D4; color: #000000;">0.16</td></tr>
+  <tbody class="gt_table_body" style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3;">
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">flavor</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #2E0B0B; color: #FFFFFF;" bgcolor="#2E0B0B" valign="middle" align="right">0.83</td></tr>
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">aftertaste</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #3C0F0F; color: #FFFFFF;" bgcolor="#3C0F0F" valign="middle" align="right">0.79</td></tr>
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">acidity</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #561515; color: #FFFFFF;" bgcolor="#561515" valign="middle" align="right">0.72</td></tr>
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">balance</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #5A1616; color: #FFFFFF;" bgcolor="#5A1616" valign="middle" align="right">0.71</td></tr>
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">cupper_points</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #651919; color: #FFFFFF;" bgcolor="#651919" valign="middle" align="right">0.68</td></tr>
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">aroma</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #671A1A; color: #FFFFFF;" bgcolor="#671A1A" valign="middle" align="right">0.68</td></tr>
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">body</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #791E1E; color: #FFFFFF;" bgcolor="#791E1E" valign="middle" align="right">0.63</td></tr>
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">clean_cup</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #B24A4A; color: #FFFFFF;" bgcolor="#B24A4A" valign="middle" align="right">0.44</td></tr>
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">uniformity</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #BA5E5E; color: #FFFFFF;" bgcolor="#BA5E5E" valign="middle" align="right">0.40</td></tr>
+    <tr><td headers="term" class="gt_row gt_left" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">sweetness</td>
+<td headers="total_cup_points" class="gt_row gt_right" style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #DEB2B2; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums; background-color: #EDD4D4; color: #000000;" bgcolor="#EDD4D4" valign="middle" align="right">0.16</td></tr>
   </tbody>
   
   
